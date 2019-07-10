@@ -13,7 +13,7 @@ public class MainTienda {
 		double p;
 		String n, t;
 		int c, a;
-		boolean bool=true;
+		boolean bool = true;
 
 		System.out.println("Bienvenido");
 		System.out.println("Ingrese su nombre: ");
@@ -29,25 +29,22 @@ public class MainTienda {
 				+ "\n5. Granos Basicos");
 		do {
 			try {
-				
+
 				a = Integer.parseInt(sc.nextLine());
-		if(a>=1 && a<=5) {
-				System.out.println("Gracias por su compra!");
-				System.out.println("El detalle de venta es: " 
-						
-						+ "\nElPrecio producto: "+ tc.totalCompra(p, c)
-						+ "\nEl descuento fue de: " + TiendaController.descuento()
-						+ "\nTOTAL: " + TiendaController.getTotal()
-						+ "\nCategoria del producto: "+ TiendaController.areaProducto(a)
-				);
-				bool = false;
-		}
+				if (a >= 1 && a <= 5) {
+					System.out.println("Gracias por su compra!");
+					System.out.println("El detalle de venta es: "
+
+							+ "\nElPrecio producto: " + tc.totalCompra(p, c) + "\nEl descuento fue de: "
+							+ TiendaController.descuento() + "\nTOTAL: " + TiendaController.getTotal()
+							+ "\nCategoria del producto: " + TiendaController.areaProducto(a));
+					bool = false;
+				}
 			} catch (Exception e) {
 				System.out.println("Solo numeros entre 1 al 5");
 				bool = true;
 			}
 		} while (bool == true);
-
 
 	}
 

@@ -1,10 +1,13 @@
 package tiendaAbstracta;
 
+//import java.util.List;
+
 public abstract class ProductosAbstracta implements TiendaInterfaz {
 
 	private static double c, d, descuento, total;
 	private static String area;
-
+//	private List<ProductosAbstracta> areaList;
+	
 //	static boolean bool = true;
 	@Override
 	public double totalCompra(double precio, int cantidad) {
@@ -12,6 +15,12 @@ public abstract class ProductosAbstracta implements TiendaInterfaz {
 		setC(precio * cantidad);
 		return getC();
 	}
+	
+//	public List<ProductosAbstracta> listaArea(){
+//		for(ProductosAbstracta area:areaList) {
+//			
+//		}
+//	}
 
 	public static double descuento() {
 
@@ -26,7 +35,7 @@ public abstract class ProductosAbstracta implements TiendaInterfaz {
 
 		}
 
-		if (getC() >= 20 && areaProducto(4) =="Granos Basicos") {
+		else if (getC() >= 20 && (areaProducto(1) == "Frutas" || areaProducto(2) == "Verduras" || areaProducto(3) == "Carnes" || areaProducto(4) == "Lacteos" || areaProducto(5) =="Granos Basicos")) {
 
 			setDescuento(0.05);
 
